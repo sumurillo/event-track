@@ -19,8 +19,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/movies', // change path later
-    failureRedirect: '/movies'
+    successRedirect: '/localhost:3000', // change path later
+    failureRedirect: '/localhost:3000'
   }
 ));
 
