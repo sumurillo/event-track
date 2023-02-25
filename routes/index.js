@@ -19,15 +19,15 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/events', // change path later
-    failureRedirect: '/events'
+    successRedirect: '/', 
+    failureRedirect: '/'
   }
 ));
 
 router.get('/logout', function(req, res) {
   req.logout(function() {
     //change path later
-    res.redirect('/events')
+    res.redirect('/')
   });
 });
 

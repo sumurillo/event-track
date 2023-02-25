@@ -6,6 +6,6 @@ module.exports = {
 
 function index(req, res) {
     Event.find({}, function(err, events) {
-        res.render('events/index', { title: 'All Events', events })
+        res.render('/index', { title: 'All Events', events })
     });
 }
