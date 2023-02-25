@@ -4,7 +4,7 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Event Track' });
 });
 
 //Google OAuth login route
@@ -19,15 +19,15 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/localhost:3000', // change path later
-    failureRedirect: '/localhost:3000'
+    successRedirect: '/events', // change path later
+    failureRedirect: '/events'
   }
 ));
 
 router.get('/logout', function(req, res) {
   req.logout(function() {
     //change path later
-    res.redirect('/movies')
+    res.redirect('/events')
   });
 });
 
