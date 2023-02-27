@@ -9,10 +9,11 @@
 </head>
 <body>
   <nav>
-    <a href="/events/">Events</a>
-    <a href="/new/">Create Event</a>
-    <a href="/myevents/">My Events</a>   
+    <a href="/events">EVENTS</a>
+    
     <% if (user) { %>
+      <a href="/new">CREATE EVENT</a>
+      <a href="/myevents">MY EVENTS</a>   
       <a href="/logout">LOG OUT</a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>

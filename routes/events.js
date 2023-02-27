@@ -2,4 +2,6 @@ const express = require('express');
 const router = express.Router();
 const eventsCtrl = require('../controllers/events');
 
-router.get('/', eventsCtrl.index);
+router.get('/', function(req, res, next) {
+    res.render('home', { title: 'Event Track' });
+  });
