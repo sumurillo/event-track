@@ -1,15 +1,20 @@
 <%- include('../partials/header') %>
 
 <h1>Create Event</h1>
+<form action="/events" method="POST">
+    <label>Event Title:
+        <input type="text" name="title">
+    </label><br>
+    <label>Date:
+        <input type="date">
+    </label><br>
+    <label>Location:
+        <input type="text">
+    </label><br>
+    <label>Description:
+        <input type="text">
+    </label><br>
+    <button type="submit">Add Event</button>
+</form>
 
-<label>Event Title:
-    <input type="text" name="title">
-</label><br>
-<label>Date:
-    <input type="date">
-</label><br>
-<label>Location:</label>
-    <input type="text">
-<br><label>Description:</label>
-    <input type="text">
 <%- include('../partials/footer') %>

@@ -15,5 +15,5 @@ function index(req, res) {
 }
 
 function newEvent(req, res) {
-    res.render('events/new')
-}
+    res.render('/')
+};
