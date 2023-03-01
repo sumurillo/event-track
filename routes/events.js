@@ -7,4 +7,7 @@ router.get('/', function(req, res, next) {
     res.render('events/events', { title: 'Event Track' });
   });
 
-  module.exports = router;
+//GET /events
+router.get('/events', eventsCtrl.index);
+
+ module.exports = router;

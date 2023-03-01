@@ -2,5 +2,28 @@
 
 <h1>ALL EVENTS</h1>
 
+<table>
+  <thead>
+    <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Description</th>
+        <th>Guests</th>
+        <th>Created By</th>
+      </tr>
+  </thead>
+  <tbody>
+    <% events.forEach(function(e) { %>
+        <tr>
+          <td><%= e.title %></td>
+          <td><%= e.date %></td>
+          <td><%= e.location %></td>
+          <td><%= e.description %></td>
+          <td><%= e.createdBy %></td>
+        </tr>
+    <% }); %>
+  </tbody>
+</table>
 
 <%- include('../partials/footer') %>

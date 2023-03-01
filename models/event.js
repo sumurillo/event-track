@@ -18,16 +18,15 @@ const eventSchema = new Schema({
         type: String,
         required: false
     },
-    guest: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true
     },
+    guest: [{
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+    }],
     userName: String,
     userAvatar: String
 });
