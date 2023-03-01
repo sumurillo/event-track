@@ -53,4 +53,15 @@ nav > a.active {
   height: 30px;
 }
 
+.event-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-user img {
+  border-radius: 50%;
+  height: 40px;
+}
+
 

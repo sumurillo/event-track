@@ -22,7 +22,7 @@ const eventSchema = new Schema({
     //     type: Schema.Types.ObjectId,
     //     ref: 'User',
     // }],
-    createdBy: {
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true

@@ -20,7 +20,7 @@
           <td><%= e.date %></td>
           <td><%= e.location %></td>
           <td><%= e.description %></td>
-          <td><%= e.createdBy %></td>
+          <td class="event-user"><img alt="avatar" src="<%= e.userAvatar%> " referrerpolicy="no-referrer" > <%= e.userName %></td>
         </tr>
     <% }); %>
   </tbody>

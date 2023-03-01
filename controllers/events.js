@@ -11,14 +11,16 @@ module.exports = {
 
 function index(req, res) {
     Event.find({}, function(err, events) {
-        console.log(events)
         res.render('events/events', { title: 'All Events', events: events })
     });
 }
 
 async function create(req, res){
     console.log(req.body);
-    req.body.createdBy = req.user;
+    // req.body.user = req.user;
+    req.body.user = req.user;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
     let event = await new Event(req.body);
     await event.save();
     res.redirect('/events')
