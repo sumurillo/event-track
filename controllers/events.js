@@ -11,7 +11,8 @@ module.exports = {
 
 function index(req, res) {
     Event.find({}, function(err, events) {
-        res.render('events/events', { title: 'All Events', events })
+        console.log(events)
+        res.render('events/events', { title: 'All Events', events: events })
     });
 }
 
