@@ -2,7 +2,6 @@ const Event = require('../models/event');
 
 module.exports = {
     index,
-    new: newEvent,
     create,
     userEvents,
     update,
@@ -25,10 +24,6 @@ async function create(req, res){
     res.redirect('/events')
 };
 
-function newEvent(req, res) {
-    res.render('/')
-};
-
 function userEvents(req, res) {
     Event.find({user: req.user._id}, function(err, events){
         console.log(events);
@@ -37,7 +32,7 @@ function userEvents(req, res) {
 }
 
 function update(req, res){
-    
+    let 
 }
 
 function deleteEvent(req, res) {

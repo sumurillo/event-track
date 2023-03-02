@@ -14,15 +14,11 @@
   <tbody>
     <% events.forEach(function(e) { %>
         <tr>
-          <td><%= e.title %></td>
-          <td><%= e.date %></td>
-          <td><%= e.location %></td>
-          <td><%= e.description %></td>
         <form action="/events/<%=e.id%>?_method=PUT" METHOD="POST">
-            <input type="text" name="title" value="<%= e.title.text %>">
-            <input type="date" name="date" value="<%= e.date.date %>">
-            <input type="text" name="location" value="<%= e.location.text %>">
-            <input type="text" name="description" value="<%= e.description.text %>">
+            <input name="title" value="<%= e.title %>">
+            <input name="date" value="<%= e.date %>">
+            <input name="description" value="<%= e.description %>">
+            <input name="location" value="<%= e.location %>">
             <button type="submit">Update Event</button>
         </form>
         <form action="/myevents/<%= e.id %>?_method=DELETE" method="POST">

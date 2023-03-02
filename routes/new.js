@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const eventsCtrl = require('../controllers/events');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
+const eventsCtrl = require('../controllers/events');
 
-// //GET creating new event page
-// router.get('/', function(req, res) {
-//     res.render('events/new', { title: 'Event' });
-//   });
+//GET create event page /new
+router.get('/', function(req, res) {
+    res.render('events/new');
+  });
 
-//GET /events/new
-router.get('/new', eventsCtrl.new); 
-//POST /events/new
+//POST create the new event and redirect back to /event
 router.post('/event', eventsCtrl.create); 
 
 
