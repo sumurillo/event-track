@@ -36,9 +36,9 @@ function userEvents(req, res) {
     });
 }
 
-// function update(req, res){
-//     let 
-// }
+function update(req, res){
+    
+}
 
 function deleteEvent(req, res) {
     console.log(req.params.id);
