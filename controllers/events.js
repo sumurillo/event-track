@@ -36,6 +36,8 @@ function userEvents(req, res) {
 }
 
 function deleteEvent(req, res) {
-    Event.deleteOne(req.params.id);
-    res.redirect('events/myevents');
+    console.log(req.params.id);
+    Event.findByIdAndDelete(req.params.id, function(){
+        res.redirect('/myevents');
+    });
 };
