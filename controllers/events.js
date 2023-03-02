@@ -5,6 +5,7 @@ module.exports = {
     new: newEvent,
     create,
     userEvents,
+    update,
     delete: deleteEvent
 };
 
@@ -34,6 +35,10 @@ function userEvents(req, res) {
         res.render('events/myevents', { events })
     });
 }
+
+// function update(req, res){
+//     let 
+// }
 
 function deleteEvent(req, res) {
     console.log(req.params.id);

@@ -2,11 +2,35 @@
 
 <h1>My Events</h1>
 
-<% events.forEach(function(e) { %>
-    <form action="/myevents/<%= e.id %>?_method=DELETE" method="POST">
-         <button type="submit">Delete</button>
-    </form>
-
-<% }); %>
+<table>
+  <thead>
+    <tr>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Description</th>
+    </tr>    
+  </thead>
+  <tbody>
+    <% events.forEach(function(e) { %>
+        <tr>
+          <td><%= e.title %></td>
+          <td><%= e.date %></td>
+          <td><%= e.location %></td>
+          <td><%= e.description %></td>
+        <form action="/events/<%=e.id%>?_method=PUT" METHOD="POST">
+            <input type="text" name="title" value="<%= e.title.text %>">
+            <input type="date" name="date" value="<%= e.date.date %>">
+            <input type="text" name="location" value="<%= e.location.text %>">
+            <input type="text" name="description" value="<%= e.description.text %>">
+            <button type="submit">Update Event</button>
+        </form>
+        <form action="/myevents/<%= e.id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+        </tr>
+    <% }); %>
+  </tbody>
+</table>
 
 <%- include('../partials/footer') %>
