@@ -5,7 +5,7 @@ const eventsCtrl = require('../controllers/events');
 
 //GET creating new event page
 router.get('/', function(req, res) {
-    res.render('events/new', { title: 'Event Track' });
+    res.render('events/new', { title: 'Event' });
   });
 
 //GET /events/new

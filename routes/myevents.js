@@ -4,9 +4,8 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 const eventsCtrl = require('../controllers/events');
 
-//GET users events page
-router.get('/', function(req, res, next) {
-    res.render('events/myevents', { title: 'Event Track' });
-  });
+router.get('/', eventsCtrl.userEvents);
 
-  module.exports = router;
+router.delete('/:id', eventsCtrl.delete);
+
+module.exports = router;

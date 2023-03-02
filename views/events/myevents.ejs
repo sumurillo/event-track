@@ -2,4 +2,11 @@
 
 <h1>My Events</h1>
 
+<% events.forEach(function(e) { %>
+    <form action="/myevents/<%= e.id %>?_method=DELETE" method="POST">
+         <button type="submit">Delete</button>
+    </form>
+
+<% }); %>
+
 <%- include('../partials/footer') %>
