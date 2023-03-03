@@ -4,6 +4,7 @@ module.exports = {
     index,
     create,
     userEvents,
+    edit,
     update,
     delete: deleteEvent
 };
@@ -31,8 +32,22 @@ function userEvents(req, res) {
     });
 }
 
-function update(req, res){
-    let 
+function edit(req, res) {
+    Event.findOne({ events: req.body.id}, function(err, event) {
+      let event = events.event.id(req.params.id);
+      res.render('/event', { event });
+    });
+}
+
+function update(req, res) {
+    console.log(req.params);
+    Event.findById(req.params.id, function(err, report) {
+        console.log('hello', events);
+        events.event = req.body.id;
+        report.save(function(err) {
+            res.redirect(`/events/${req.params.event}`);
+        });
+    });
 }
 
 function deleteEvent(req, res) {
