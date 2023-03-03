@@ -15,7 +15,6 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
 var eventsRouter = require('./routes/events');
 var myEventsRouter = require('./routes/myevents');
 var newRouter = require('./routes/new');
@@ -49,7 +48,6 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-// app.use('/users', usersRouter);
 app.use('/events', eventsRouter);
 app.use('/myEvents', myEventsRouter);
 app.use('/new', newRouter);

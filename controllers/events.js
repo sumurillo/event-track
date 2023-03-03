@@ -33,22 +33,22 @@ function userEvents(req, res) {
 }
 
 function edit(req, res) {
-    Event.findOne({ events: req.body.id}, function(err, event) {
-      let event = events.event.id(req.params.id);
-      res.render('/event', { event });
-    });
-}
+    Event.findOne({_id: req.params.id}, function(err, event) {
+       if (err || !event) return res.redirect('/events');
+        res.render('events/edit', { event });
+    })
+};
 
 function update(req, res) {
-    console.log(req.params);
-    Event.findById(req.params.id, function(err, report) {
-        console.log('hello', events);
-        events.event = req.body.id;
-        report.save(function(err) {
-            res.redirect(`/events/${req.params.event}`);
-        });
-    });
-}
+    Event.findOneAndUpdate({_id: req.params.id, user: req.user._id}, req.body,
+      {new: true},
+      function(err, event) {
+        if (err || !event) return res.redirect('/events');
+        res.redirect('/myevents');
+      }
+    );
+  }
+
 
 function deleteEvent(req, res) {
     console.log(req.params.id);

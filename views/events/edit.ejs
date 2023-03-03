@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<form action="/events/<%= event._id %>?_method=PUT" method="POST">
+    <!-- Value attribute is being set to the comment's current text -->
+    <input name="title" value="<%= event.title %>">
+    <input name="date" value="<%= event.date %>">
+    <input name="location" value="<%= event.location %>">
+    <input name="description" value="<%= event.description %>">
+    <button type="submit">UPDATE EVENT</button>
+</form>
+
+<%- include('../partials/footer') %>

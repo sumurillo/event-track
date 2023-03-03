@@ -4,7 +4,7 @@
 
 <table>
   <thead>
-    <tr>
+    <br><tr>
         <th>Event Name</th>
         <th>Date</th>
         <th>Location</th>
@@ -14,11 +14,11 @@
   <tbody>
     <% events.forEach(function(e) { %>
         <tr>
-        <form action="/events/<%=e.id%>?_method=PUT" METHOD="POST">
-            <input name="title" value="<%= e.title %>">
-            <input name="date" value="<%= e.date %>">
-            <input name="description" value="<%= e.description %>">
-            <input name="location" value="<%= e.location %>">
+          <td><%= e.title %></td>
+          <td><%= e.date %></td>
+          <td><%= e.location %></td>
+          <td><%= e.description %></td>
+        <br><form action="/events/<%=e.id%>/edit" METHOD="GET">
             <button type="submit">Update Event</button>
         </form>
         <form action="/myevents/<%= e.id %>?_method=DELETE" method="POST">
