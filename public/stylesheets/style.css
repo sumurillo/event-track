@@ -19,7 +19,7 @@ a {
 
 nav {
   grid-area: nav;
-  background-color: rgb(156, 244, 156);
+  background-color: rgb(213, 168, 241);
   display: flex;
   justify-content: flex-end;
   align-items: center;
