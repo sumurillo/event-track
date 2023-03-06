@@ -20,7 +20,10 @@ A basic application for the community to add an event and for the community to a
 
 # Screenshot
 
-<img src="./public/images/1.png" width="200">
+<img src="./public/images/1.png" width="600">
+<img src="./public/images/2.png" width="600">
+<img src="./public/images/3.png" width="600">
+<img src="./public/images/4.png" width="600">
 
 # Technologies Used
 
