@@ -20,7 +20,7 @@ A basic application for the community to add an event and for the community to a
 
 # Screenshot
 
-<img src="https://imgur.com/fMAcwPH">
+<img src="./public/images/1.png" width="200">
 
 # Technologies Used
 
