@@ -20,8 +20,10 @@ A basic application for the community to add an event and for the community to a
 
 # Screenshot
 
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
+<img src=“.public/images/welcome-page.png”>
+<img src=“.public/images/create-event.png”>
+<img src=“.public/images/edit-event.png”>
+<img src=“.public/images/events.png”>
 
 # Technologies Used
 
