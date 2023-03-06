@@ -20,10 +20,10 @@ A basic application for the community to add an event and for the community to a
 
 # Screenshot
 
-<img src=“./public/images/welcome-page.png”>
-<img src=“./public/images/create-event.png”>
-<img src=“./public/images/edit-event.png”>
-<img src=“./public/images/events.png”>
+<img src=“./public/images/1.png”>
+<img src=“./public/images/2.png”>
+<img src=“./public/images/3.png”>
+<img src=“./public/images/4.png”>
 
 # Technologies Used
 
