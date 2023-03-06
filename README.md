@@ -20,7 +20,7 @@ A basic application for the community to add an event and for the community to a
 
 # Screenshot
 
-<a href="//imgur.com/a/3yDBK8z"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8">
+<img src="https://imgur.com/fMAcwPH">
 
 # Technologies Used
 
