@@ -1,7 +1,7 @@
 ## E-Vite
 A basic application for the community to add an event and for the community to also view those events publicly.
 
-### Application Features
+# Application Features
 ----
 ##### Navigation
 - The navigation bar allows the user to navigate between pages to create an event or view all or only user's events.
@@ -20,10 +20,10 @@ A basic application for the community to add an event and for the community to a
 
 # Screenshot
 
-<img src=“./public/images/1.png”>
-<img src=“./public/images/2.png”>
-<img src=“./public/images/3.png”>
-<img src=“./public/images/4.png”>
+<img src=“https://imgur.com/fMAcwPH”>
+<img src=“https://imgur.com/s5vFEiO”>
+<img src=“https://imgur.com/UoXC1so”>
+<img src=“https://imgur.com/63tAHjO”>
 
 # Technologies Used
 
