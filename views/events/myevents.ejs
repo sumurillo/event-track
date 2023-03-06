@@ -5,10 +5,12 @@
 <table>
   <thead>
     <br><tr>
-        <th scope="col1">Event Name</th>
-        <th scope="col2">Date</th>
-        <th scope="col3">Location</th>
-        <th scope="col4">Description</th>
+        <th>Event Name</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Description</th>
+        <th>Need to Edit?</th>
+        <th>Cancel or Done?</th>
     </tr>    
   </thead>
   <tbody>
@@ -19,10 +21,10 @@
           <td class="data"><%= e.location %></td>
           <td class="data"><%= e.description %></td>
         <br><form action="/events/<%=e.id%>/edit" METHOD="GET">
-            <button type="submit">Update Event</button>
+          <td><button type="submit">Update Event</button></td>
         </form>
         <form action="/myevents/<%= e.id %>?_method=DELETE" method="POST">
-          <button type="submit">Delete</button>
+            <td><button type="submit">Delete</button></td>
         </form><br>
         </tr>
     <% }); %>
