@@ -16,7 +16,7 @@ const eventSchema = new Schema({
     },
     description: {
         type: String,
-        required: false
+        required: true
     },
     // guest: [{
     //     type: Schema.Types.ObjectId,

@@ -1,16 +1,19 @@
 * {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  /* box-sizing: border-box; */
+  font-family: 'Amatic SC', cursive;
+  font-size: 32px;
   color: #424748;
 }
 
 body {
-  margin: 0px 100px;
+  margin: 0px;
   display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-    "nav"
-    "main"
+  grid-template-rows: 60px 5fr;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
 }
 
 a {
@@ -18,28 +21,56 @@ a {
 }
 
 nav {
-  grid-area: nav;
-  background-color: rgb(213, 168, 241);
+  background-color: rgb(163, 225, 155);
   display: flex;
-  justify-content: flex-end;
+  width: 100%;
   align-items: center;
   padding: 0 20px 0 30px;
 };
 
 nav > a {
-  margin: 20px;
+  margin: 30px;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 30px;
+  border-radius: 2px;
 }
 
 nav > a:hover:not(.active) {
-  color: white;
+  color: rgb(111, 193, 255);
 }
 
 nav > a.active {
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: default;
+}
+
+table {
+  width: 80%;
+  border-radius: 8px;
+  margin: auto;
+}
+
+table, th, td {
+  border: 3px solid;
+  padding: 10px;
+}
+
+th {
+  background-color: rgb(163, 225, 155);
+}
+
+input [type=date] {
+  width: 20%;
+  border: 1 px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
 
 .login {
@@ -56,7 +87,7 @@ nav > a.active {
 .event-user {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .event-user img {

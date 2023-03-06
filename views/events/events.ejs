@@ -15,13 +15,15 @@
   </thead>
   <tbody>
     <% events.forEach(function(e) { %>
+      <form>
         <tr>
           <td><%= e.title %></td>
-          <td><%= e.date.toLocaleDateString() %></td>
+          <td><%= e.date.toLocaleDateString("en-US", {timeZone: "UTC"}) %></td>
           <td><%= e.location %></td>
           <td><%= e.description %></td>
           <td class="event-user"><img alt="avatar" src="<%= e.userAvatar%> " referrerpolicy="no-referrer" > <%= e.userName %></td>
         </tr>
+      </form><br> 
     <% }); %>
   </tbody>
 </table>

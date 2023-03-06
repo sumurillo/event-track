@@ -5,25 +5,25 @@
 <table>
   <thead>
     <br><tr>
-        <th>Event Name</th>
-        <th>Date</th>
-        <th>Location</th>
-        <th>Description</th>
+        <th scope="col1">Event Name</th>
+        <th scope="col2">Date</th>
+        <th scope="col3">Location</th>
+        <th scope="col4">Description</th>
     </tr>    
   </thead>
   <tbody>
     <% events.forEach(function(e) { %>
         <tr>
-          <td><%= e.title %></td>
-          <td><%= e.date.toLocaleDateString() %></td>
-          <td><%= e.location %></td>
-          <td><%= e.description %></td>
+          <td class="data"><%= e.title %></td>
+          <td class="data"><%= e.date.toLocaleDateString("en-US", {timeZone: "UTC"}) %></td>
+          <td class="data"><%= e.location %></td>
+          <td class="data"><%= e.description %></td>
         <br><form action="/events/<%=e.id%>/edit" METHOD="GET">
             <button type="submit">Update Event</button>
         </form>
         <form action="/myevents/<%= e.id %>?_method=DELETE" method="POST">
           <button type="submit">Delete</button>
-        </form>
+        </form><br>
         </tr>
     <% }); %>
   </tbody>

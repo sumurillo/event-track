@@ -1,12 +1,20 @@
 <%- include('../partials/header') %>
 
+<h1>Edit Event</h1>
 <form action="/events/<%= event._id %>?_method=PUT" method="POST">
-    <!-- Value attribute is being set to the comment's current text -->
-    <input name="title" value="<%= event.title %>">
-    <input name="date" value="<%= event.date %>">
-    <input name="location" value="<%= event.location %>">
-    <input name="description" value="<%= event.description %>">
-    <button type="submit">UPDATE EVENT</button>
+    <label>Event Title:
+        <br><input type= "text" name="title" value="<%= event.title %>">
+    </label><br>
+    <label>Date:
+        <br><input type="date" name="date" value="<%= event.date %>">
+    </label><br>
+    <label>Location:
+        <br><input type="text" name="location" value="<%= event.location %>">
+    </label><br>
+    <label>Description:
+        <br><input type="text" name="description" value="<%= event.description %>">
+    </label><br>
+    <br><button type="submit">UPDATE EVENT</button>
 </form>
 
 <%- include('../partials/footer') %>
