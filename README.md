@@ -38,8 +38,8 @@ A basic application for the community to add an event and for the community to a
 
 # Getting Started
 
-<a href="https://trello.com/b/qdTQf6Sd/project-2">Project Planning</a>
-<a href="https://e-vite.herokuapp.com/">Deployed Application</a>
+- <a href="https://trello.com/b/qdTQf6Sd/project-2">Project Planning</a>
+- <a href="https://e-vite.herokuapp.com/">Deployed Application</a>
 
 
 # Next Steps
